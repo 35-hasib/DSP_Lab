@@ -49,7 +49,7 @@ x_imag = imag(x_sum);
 x_meg = sqrt(x_real.^2 + x_imag.^2);
 x_phase = atan2(x_imag, x_real);
 
-th = [-90,90];
+th = [0,-30,30,-45,45,-60,60,-90,90];
 x_phase(~ismembertol(x_phase, deg2rad(th), 1e-6)) = 0; %IMP
 
 x_phase_deg = rad2deg(x_phase);
